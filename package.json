@@ -28,11 +28,19 @@
   ],
   "scripts": {
     "build": "vite build",
-    "test": "vitest run",
+    "test:unit": "vitest run --exclude=test/e2e.test.ts",
     "test:e2e": "npm run build:test-app && vitest run test/e2e.test.ts",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:no-build": "vitest run",
     "build:test-app": "cd test-app && vite build",
     "dev:test-app": "cd test-app && vite",
-    "lint": "eslint src"
+    "lint": "eslint --ext .ts,.svelte",
+    "type-check": "tsc --noEmit",
+    "svelte-check": "svelte-check --workspace src",
+    "format": "prettier --write . '!**/*.json.js'",
+    "format:check": "prettier --check . '!**/*.js'",
+    "check": "npm run format:check && npm run lint && npm run type-check && npm run svelte-check",
+    "verify": "npm run check && npm run test"
   },
   "devDependencies": {
     "@eslint/js": "^9.38.0",
@@ -42,6 +50,8 @@
     "@types/serve-handler": "^6.1.4",
     "eslint": "^9.38.0",
     "eslint-plugin-svelte": "^3.12.5",
+    "globals": "^16.4.0",
+    "jiti": "^2.6.1",
     "jsonjsdb-builder": "^0.5.6",
     "playwright": "^1.56.1",
     "prettier": "^3.6.2",

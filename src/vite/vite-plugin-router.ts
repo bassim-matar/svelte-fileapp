@@ -21,9 +21,9 @@ export function updateRouterIndex(pageDir: string) {
           moduleName.charAt(0).toLowerCase() + moduleName.slice(1)
         let param = ''
         if (filename.includes('['))
-          param = `, param: "${filename.split('[')[1].split(']')[0]}"`
+          param = `, param: '${filename.split('[')[1].split(']')[0]}'`
         const modulePath = `./${filename}.svelte`
-        imports += `import ${moduleName} from "${modulePath}"\n`
+        imports += `import ${moduleName} from '${modulePath}'\n`
         content += `\n  ${routeName}: { component: ${moduleName}${param} },`
       }
       content += '\n} as const satisfies Record<string, RouteConfig>\n'

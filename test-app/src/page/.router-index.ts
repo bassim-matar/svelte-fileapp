@@ -1,8 +1,8 @@
-import _error from "./_error.svelte"
-import _index from "./_index.svelte"
-import _loading from "./_loading.svelte"
-import about from "./about.svelte"
-import contact from "./contact.svelte"
+import _error from './_error.svelte'
+import _index from './_index.svelte'
+import _loading from './_loading.svelte'
+import about from './about.svelte'
+import contact from './contact.svelte'
 
 import type { Component } from 'svelte'
 type RouteConfig = { component: Component<any>; param?: string }
