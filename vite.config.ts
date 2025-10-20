@@ -17,6 +17,10 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
+      output: {
+        preserveModules: true,
+        preserveModulesRoot: 'src',
+      },
       external: [
         ...builtinModules,
         'svelte',
