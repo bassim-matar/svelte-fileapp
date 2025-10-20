@@ -6,7 +6,6 @@ export {
   getAppVersion,
   copyFilesToOutDir,
   copyPaths,
-  copySpaCoreSsg,
   initBuildConfig,
   afterBuild,
 } from './vite-utils'

@@ -69,29 +69,6 @@ export function afterBuild(callback: () => void | Promise<void>) {
   }
 }
 
-/**
- * Creates a Vite plugin that copies spa-core files to app/node-scripts for SSG usage
- * @param outDir - Output directory (e.g., 'app')
- * @returns Vite plugin configuration
- */
-export function copySpaCoreSsg(outDir: string) {
-  return {
-    name: 'copySpaCoreSsg',
-    apply: 'build' as const,
-    closeBundle: async () => {
-      const spaCoreDest = `${outDir}/node-scripts/spa-core`
-      await fs.mkdir(`${spaCoreDest}/ssg`, { recursive: true })
-
-      const files = ['index.ts', 'ssg.ts', 'ssg-jsonjsdb.ts']
-      await Promise.all(
-        files.map(file =>
-          fs.copyFile(`src/spa-core/ssg/${file}`, `${spaCoreDest}/ssg/${file}`),
-        ),
-      )
-    },
-  }
-}
-
 interface BuildConfigOptions {
   tsconfigPath?: string
 }

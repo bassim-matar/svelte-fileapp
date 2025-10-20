@@ -1,6 +1,6 @@
 /**
  * SSG utilities for jsonjsdb integration
- * Extends spa-core/ssg.ts with jsonjsdb-specific functionality
+ * Extends ssg.ts with jsonjsdb-specific functionality
  */
 
 import fs from 'fs'
