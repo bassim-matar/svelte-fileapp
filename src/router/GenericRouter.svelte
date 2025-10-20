@@ -1,21 +1,21 @@
 <script lang="ts" generics="T extends string">
-  import { router } from './router.svelte.js'
-  import { registerRoutes } from './router-registration.js'
+  import { router } from './router.svelte'
+  import { registerRoutes } from './router-registration'
   import {
     getInitialPage,
     getInitialComponent,
     updateRouteComponent,
-  } from './router-helpers.js'
-  import { UrlHash, isStaticMode, isSsgRendering } from '../url.js'
+  } from './router-helpers'
+  import { UrlHash, isStaticMode, isSsgRendering } from '../url'
   import {
     page,
     pageContentLoaded,
     pageHash,
     pageLoadedRoute,
-  } from './router-store.js'
+  } from './router-store'
   import type { Component } from 'svelte'
   import type { Match } from 'navigo'
-  import type { RouterIndex } from './router-registration.js'
+  import type { RouterIndex } from './router-registration'
 
   interface Props<T extends string> {
     routerIndex: RouterIndex
