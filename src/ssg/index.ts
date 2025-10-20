@@ -1,5 +1,15 @@
 // Core SSG functionality
-export { generateStaticSite } from './ssg'
+export {
+  generateStaticSite,
+  capturePage,
+  generateSitemap,
+  createIndexFile,
+  startServer,
+  stopServer,
+  initPage,
+  waitUntilReady,
+} from './ssg'
+export type { SsgConfig } from './ssg'
 
 // Jsonjsdb-specific SSG
 export {
@@ -10,5 +20,5 @@ export {
   getEntitiesRoutes,
   createEntityDirs,
   loadSsgConfig,
-  type JsonjsdbSsgConfig,
 } from './ssg-jsonjsdb'
+export type { JsonjsdbSsgConfig } from './ssg-jsonjsdb'

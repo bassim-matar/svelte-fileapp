@@ -1,6 +1,6 @@
 {
   "name": "svelte-fileapp",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Svelte file application",
   "type": "module",
   "license": "MIT",
@@ -19,8 +19,15 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.js"
+      "import": "./dist/index.js"
+    },
+    "./vite": {
+      "types": "./dist/vite/index.d.ts",
+      "import": "./dist/vite/index.js"
+    },
+    "./ssg": {
+      "types": "./dist/ssg/index.d.ts",
+      "import": "./dist/ssg/index.js"
     }
   },
   "files": [
@@ -72,7 +79,22 @@
     "singleQuote": true
   },
   "dependencies": {
-    "navigo": "^8.11.1",
-    "sitemap": "^8.0.1"
+    "navigo": "^8.11.1"
+  },
+  "peerDependencies": {
+    "sitemap": "^8.0.1",
+    "playwright": "^1.56.1",
+    "serve-handler": "^6.1.6"
+  },
+  "peerDependenciesMeta": {
+    "sitemap": {
+      "optional": true
+    },
+    "playwright": {
+      "optional": true
+    },
+    "serve-handler": {
+      "optional": true
+    }
   }
 }

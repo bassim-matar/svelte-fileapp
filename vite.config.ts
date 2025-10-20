@@ -9,9 +9,11 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: 'src/index.ts',
-      name: 'svelte-fileapp',
-      fileName: 'index',
+      entry: {
+        index: 'src/index.ts',
+        'vite/index': 'src/vite/index.ts',
+        'ssg/index': 'src/ssg/index.ts',
+      },
       formats: ['es'],
     },
     rollupOptions: {
