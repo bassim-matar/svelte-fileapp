@@ -1,6 +1,6 @@
 {
   "name": "svelte-fileapp",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Svelte file application",
   "type": "module",
   "license": "MIT",
