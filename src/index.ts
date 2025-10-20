@@ -47,6 +47,3 @@ export type {
   RouteProps,
   RouterIndex,
 } from './router/router-registration'
-
-// Router Components
-export { default as GenericRouter } from './router/GenericRouter.svelte'

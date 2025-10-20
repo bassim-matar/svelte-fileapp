@@ -1,6 +1,6 @@
 {
   "name": "svelte-fileapp",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Svelte file application",
   "type": "module",
   "license": "MIT",
@@ -28,8 +28,13 @@
     "./ssg": {
       "types": "./dist/ssg/index.d.ts",
       "import": "./dist/ssg/index.js"
+    },
+    "./GenericRouter.svelte": {
+      "types": "./dist/router/GenericRouter.svelte.d.ts",
+      "svelte": "./dist/router/GenericRouter.svelte"
     }
   },
+  "svelte": "./dist/router/GenericRouter.svelte",
   "files": [
     "dist"
   ],
