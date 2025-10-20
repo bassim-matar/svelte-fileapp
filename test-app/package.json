@@ -1,0 +1,7 @@
+{
+  "name": "svelte-fileapp-test-app",
+  "version": "0.0.0",
+  "description": "Svelte file application test app",
+  "type": "module",
+  "license": "MIT"
+}
