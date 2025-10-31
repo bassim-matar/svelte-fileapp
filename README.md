@@ -14,7 +14,7 @@ A lightweight Svelte 5 library for building file-based applications with routing
 ## Installation
 
 ```bash
-npm install svelte-fileappr
+npm install svelte-fileapp
 ```
 
 ## Quick Start
@@ -22,7 +22,7 @@ npm install svelte-fileappr
 ### Basic App Bootstrap
 
 ```typescript
-import { bootstrapApp } from 'svelte-fileappr'
+import { bootstrapApp } from 'svelte-fileapp'
 import App from './App.svelte'
 
 // Simple bootstrap
@@ -38,7 +38,7 @@ await bootstrapApp(App, 'app', async () => {
 ### URL Management
 
 ```typescript
-import { UrlParam, UrlHash } from 'svelte-fileappr'
+import { UrlParam, UrlHash } from 'svelte-fileapp'
 
 // Get URL parameters
 const value = UrlParam.get('search')
@@ -64,7 +64,7 @@ const level2 = UrlHash.getLevel2() // Second segment
 ### Router Setup
 
 ```typescript
-import { router } from 'svelte-fileappr'
+import { router } from 'svelte-fileapp'
 
 // Navigate programmatically
 router.navigate('/home')
@@ -81,7 +81,7 @@ import {
   isFirefox,
   hasTouchScreen,
   isSmallMenu,
-} from 'svelte-fileappr'
+} from 'svelte-fileapp'
 
 if (isMobile) {
   // Mobile-specific logic
@@ -106,7 +106,7 @@ import {
   htmlReplace,
   spaHtmlOptimizations,
   getAliases,
-} from 'svelte-fileappr'
+} from 'svelte-fileapp'
 
 export default defineConfig({
   plugins: [
@@ -126,7 +126,7 @@ export default defineConfig({
 ### Basic SSG
 
 ```typescript
-import { generateStaticSite } from 'svelte-fileappr'
+import { generateStaticSite } from 'svelte-fileapp'
 
 await generateStaticSite({
   routes: ['/', '/about', '/contact'],
@@ -137,7 +137,7 @@ await generateStaticSite({
 ### Jsonjsdb SSG
 
 ```typescript
-import { generateJsonjsdbStaticSite } from 'svelte-fileappr'
+import { generateJsonjsdbStaticSite } from 'svelte-fileapp'
 
 await generateJsonjsdbStaticSite({
   dbPath: './data',
@@ -209,7 +209,7 @@ import {
   getInitialPage,
   getInitialComponent,
   updateRouteComponent,
-} from 'svelte-fileappr'
+} from 'svelte-fileapp'
 
 // Get initial page based on static mode
 const initialPage = getInitialPage(routerIndex, '_loading')
