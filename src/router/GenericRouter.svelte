@@ -1,6 +1,8 @@
 <script lang="ts" generics="T extends string">
+  import type { Component } from 'svelte'
+  import type { Match } from 'navigo'
   import { router } from './router.svelte'
-  import { registerRoutes } from './router-registration'
+  import { registerRoutes, type RouterIndex } from './router-registration'
   import {
     getInitialPage,
     getInitialComponent,
@@ -13,9 +15,6 @@
     pageHash,
     pageLoadedRoute,
   } from './router-store'
-  import type { Component } from 'svelte'
-  import type { Match } from 'navigo'
-  import type { RouterIndex } from './router-registration'
 
   interface Props<T extends string> {
     routerIndex: RouterIndex
